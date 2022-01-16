@@ -1,0 +1,11 @@
+NAME	= exoo
+
+SRCS	= megaghone.cpp
+
+OBJS	= $(SRCS:.cpp=.o)
+
+RM		= rm -rf
+cc		= g++
+
+$(NAME)	$(OBJS)
+		$()
