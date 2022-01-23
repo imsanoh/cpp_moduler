@@ -2,6 +2,7 @@
 # define CONTACT_CPP
 
 # include <string>
+# include <iostream>
 
 class Contact{
 	private:
@@ -11,6 +12,7 @@ class Contact{
 	std::string	phoneNumber;
 	std::string	darkestSecreat;
 	public:
-
 };
 #endif
+
+void
