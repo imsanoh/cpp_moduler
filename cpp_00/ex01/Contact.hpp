@@ -4,15 +4,25 @@
 # include <string>
 # include <iostream>
 
-class Contact{
+class Contact
+{
 	private:
-	std::string	firstName;
-	std::string	lastName;
-	std::string	nickName;
-	std::string	phoneNumber;
-	std::string	darkestSecreat;
+	std::string	Index;
+	std::string	FirstName;
+	std::string	LastName;
+	std::string	NickkName;
+	std::string	PhoneNumber;
+	std::string	DarkestSecreat;
+
 	public:
+	void set_Index(const std::string str);
+	void set_FirstName(const std::string str);
+	void set_LastName(const std::string str);
+	void set_NickName(const std::string str);
+
+	std::string get_Index(void) const;
+	std::string get_FirstName(void) const;
+	std::string get_LastName(void) const;
+	std::string get_NickName(void) const;
 };
 #endif
-
-void

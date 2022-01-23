@@ -1,25 +1,27 @@
 #include "PhoneBook.hpp"
 
-class Date
-{
-    private:
-
-    public:
-        int month;
-        int day;
-        int year;
-};
-
 int main()
 {
-	Date    date;
+    std::string input;
+    
 
-    date.month = 10;
-    date.day = 14;
-    date.year = 2020;
+    while (getline(std::cin,input))
+    {
+        if(input == "ADD")
+        {
+            
+        }
+        else if (input == "SEARCH")
+        {
+            
+        }
+        else if (input == "EXIT")
+        {
+            
+        }
+        else
+        {
+            std::cout << "다시 쓰세요" << std::endl;
+        }
 
-    return 0;
 }
-
-//폰 번호(여기에 그 중요 정보들)
-//
