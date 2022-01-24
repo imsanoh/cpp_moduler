@@ -6,7 +6,6 @@
 class PhoneBook
 {
 private:
-	/* 중요한거*/
 	int	
 public:
 	PhoneBook(/* args */);

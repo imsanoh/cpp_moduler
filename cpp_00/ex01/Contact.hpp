@@ -1,8 +1,8 @@
 #ifndef CONTACT_CPP
 # define CONTACT_CPP
 
-# include <string>
 # include <iostream>
+# include <string>
 
 class Contact
 {
@@ -19,6 +19,7 @@ class Contact
 	void set_FirstName(const std::string str);
 	void set_LastName(const std::string str);
 	void set_NickName(const std::string str);
+	void set_DarkestSecreat(std::string str);
 
 	std::string get_Index(void) const;
 	std::string get_FirstName(void) const;
