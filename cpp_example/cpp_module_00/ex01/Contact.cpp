@@ -26,8 +26,8 @@ void	Contact::show_information()
 {
 	std::cout << "First name: " << this->firstName << std::endl;
 	std::cout << "Last name: " << this->lastName << std::endl;
-	std::cout << "Nickname: " << this->nickname << std::endl;
-	std::cout << "Number: " << this->number << std::endl;
+	std::cout << "Nick name: " << this->nickname << std::endl;
+	std::cout << "Numaber: " << this->number << std::endl;
 	std::cout << "The Darkest Secret: " << this->secret << std::endl;
 }
 

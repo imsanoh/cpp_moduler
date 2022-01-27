@@ -14,6 +14,7 @@ public:
 	~PhoneBook();
 	void	add();
 	void	search();
+	void	show();
 };
 
 #endif
