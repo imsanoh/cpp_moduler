@@ -1,18 +1,24 @@
-NAME = megaphone
+NAME		=megaphone
 
-CPP = clang++
+SRCS		=megaphone.cpp
 
-FLAGS = -Wall -Wextra -Werror
+CPPFLAGS	=-Wall -Wextra -Werror
 
-RM = rm -f
+CLANG		=g++
 
-MAIN = MegaPhone.cpp
+OBJS		=${SRCS:.cpp=.o}
 
-$(NAME): $(MAIN)
-	$(CPP) $(MAIN) $(FLAGS) -o $(NAME)
+all			:${NAME}
 
-all : $(NAME)
+${NAME}		:${OBJS}
+			${CLANG} ${CPPFLAGS} -o $@ $^
 
-clean: $(RM) $(NAME)
+clean		:
+			rm -rf ${OBJS}
 
-re:	clean all
+fclean		:clean
+			rm -rf ${NAME}
+
+re			:fclean all
+
+.PHONY		:	all clean fclean re
