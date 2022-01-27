@@ -1,11 +1,18 @@
-NAME	= exoo
+NAME = megaphone
 
-SRCS	= megaghone.cpp
+CPP = clang++
 
-OBJS	= $(SRCS:.cpp=.o)
+FLAGS = -Wall -Wextra -Werror
 
-RM		= rm -rf
-cc		= g++
+RM = rm -f
 
-$(NAME)	$(OBJS)
-		$()
+MAIN = MegaPhone.cpp
+
+$(NAME): $(MAIN)
+	$(CPP) $(MAIN) $(FLAGS) -o $(NAME)
+
+all : $(NAME)
+
+clean: $(RM) $(NAME)
+
+re:	clean all

@@ -1,8 +1,28 @@
+#include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook()
+{}
+
+PhoneBook::~PhoneBook()
+{}
+
+void	PhoneBook::start()
+{
+	while (1)
+	{
+		std::cout <<
+	}
+
+}
 
 
+void PhoneBook::search()
+{
+
+}
 {
     std::string input;
-    
+
 
     while (getline(std::cin,input))
     {
@@ -23,3 +43,4 @@
             std::cout << "다시 쓰세요!" << std::endl;
         }
 }
+

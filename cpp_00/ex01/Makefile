@@ -1,5 +1,20 @@
-NAME	= phonebook
+NAME = PhoneBook
 
-SRCS	= Contact.cpp PhoneBook.cpp Main.cpp
+CPP = clang++
 
-OBJS	= $(SRCS:.cpp = .o)
+FLAGS = -Wall -Wextra -Werror
+
+RM = rm -f
+
+MAIN = Main.cpp
+
+SRCS =
+
+$(NAME): $(MAIN)
+	$(CPP) $(MAIN) $(FLAGS) -o $(NAME)
+
+all : $(NAME)
+
+clean: $(RM) $(NAME)
+
+re:	clean all
