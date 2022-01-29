@@ -15,6 +15,7 @@ public:
 	void	add();
 	void	search();
 	void	show();
+	void	show_contacts(unsigned int index);
 };
 
 #endif

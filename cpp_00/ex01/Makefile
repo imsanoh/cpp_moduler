@@ -1,20 +1,24 @@
-NAME = PhoneBook
+NAME		=megaphone
 
-CPP = clang++
+SRCS		=Main.cpp Contact.cpp PhoneBook.cpp
 
-FLAGS = -Wall -Wextra -Werror
+CPPFLAGS	=-Wall -Wextra -Werror
 
-RM = rm -f
+CLANG		=g++
 
-MAIN = Main.cpp
+OBJS		=${SRCS:.cpp=.o}
 
-SRCS =
+all			:${NAME}
 
-$(NAME): $(MAIN)
-	$(CPP) $(MAIN) $(FLAGS) -o $(NAME)
+${NAME}		:${OBJS}
+			${CLANG} ${CPPFLAGS} -o $@ $^
 
-all : $(NAME)
+clean		:
+			rm -rf ${OBJS}
 
-clean: $(RM) $(NAME)
+fclean		:clean
+			rm -rf ${NAME}
 
-re:	clean all
+re			:fclean all
+
+.PHONY		:	all clean fclean re
