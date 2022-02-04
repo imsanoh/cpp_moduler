@@ -2,13 +2,17 @@
 
 int main()
 {
-	Zombie	zombie("3");
-	Zombie *newZ;
+	Zombie *zombies;
 
-	zombie.announce();
-	newZ = newZombie("2");
-	randomChump("1");
-	newZ->announce();
-	delete newZ;
+	int N = 20;
+
+	zombies = zombieHorde(N, "sanoh");
+	for (int i = 0; i < N; i++)
+	{
+		zombies[i].announce();
+	}
+	delete []zombies;
 }
+
 //참조 . 포인터 ->
+//함수 보는거 구현 하는거
