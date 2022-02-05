@@ -11,4 +11,3 @@ int main()
 	newZ->announce();
 	delete newZ;
 }
-//참조 . 포인터 ->
