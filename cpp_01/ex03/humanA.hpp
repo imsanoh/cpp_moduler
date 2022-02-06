@@ -1,18 +1,18 @@
 #ifndef HUMANA_HPP
 # define HUMANA_HPP
 
-class humanA
+class HumanA
 {
 	private:
 		std::string _name;
+		Weapon *weapon;
 	public:
-		humanA(std::string _name);
-		~humanA();
+		HumanA(std::string _name, Weapon &weapon);// 계속 가지고 잇는중?
+		void attack();
+		void give_weapon(Weapon &weapon);
+		~HumanA();
 };
 
 #endif
 
-ifs.getline()에 그냥 넣어버리기 
 
-//getType 이라는 메서드를 만들기
-//setType 이라는 친구도 만들기

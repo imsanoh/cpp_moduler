@@ -1,10 +1,8 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA()
+HumanA::HumanA(Weapon )
 {
-	Weapon
-	name
-	attack()
+	std::cout << name << attack << weapon << std::endl;
 }
 
 HumanA::~HumanA()

@@ -1,19 +1,17 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon()
-{	
-}
-
-Weapon::Weapon(const Weapon &ref)
+Weapon::Weapon(std::string type)
 {
-	*this = ref;
 }
 
 Weapon::~Weapon()
 {
 }
 
-Weapon& Weapon::operator=(const Weapon &ref)
+std::string &Weapon::getType()
 {
-	return (*this);
+}
+
+std::string Weapon::setType(std::string type)
+{
 }
