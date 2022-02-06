@@ -1,6 +1,6 @@
-NAME		=zombie
+NAME		=ex03
 
-SRCS		=main.cpp HumanA.cpp HumanB.cpp Weaphon.cpp
+SRCS		=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 CPPFLAGS	=-Wall -Wextra -Werror
 
