@@ -14,4 +14,5 @@ std::string &Weapon::getType()
 
 std::string Weapon::setType(std::string type)
 {
+	//??
 }
