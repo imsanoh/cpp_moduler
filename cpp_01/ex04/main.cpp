@@ -2,25 +2,52 @@
 #include <iostream>
 #include <fstream>
 
-replaces
-
-int main()
+int main(int argc, char **argv)
 {
-	//문자열 = s1;
-	//문자열2 = s2;
+	std::ifstream ifs;
+	std::string str;
 
-	std::ifstream ifs("file");
-	std::string	s1;
-	std::string	s2;
-	ifs >> s1 >> s2;
+	if (argc != 4)
+	{
+		std::cout << "error!" << std::endl;
+		return 0;
+	}
+	std::string file_name(argv[1]);
+	std::string s1(argv[2]);
+	std::string s2(argv[3]);
 
-	std::cout << s1 << " " << s2 << std::endl;
+	ifs.open(file_name);
+
+	if(ifs.fail())
+	{
+		std::cout << "error file not open!" << std::endl;
+		return 0;
+	}
+
+	std::cout << file_name << s1 << s2 << std::endl;
+	std::ofstream ofs(file_name + ".replace");
+
+	while(!ifs.eof())
+	{
+		std::getline(ifs, str);
+		ofs << str << std::endl;
+	}
+	
 	ifs.close();
-
-	std::ofstream ofs("file.replace");
-	ofs << "somethig" << std::endl;
 	ofs.close();
 }
+
+// std::ifstream ifs;
+
+// ifs.open(file_name);
+// if (n == 4)
+// {
+
+// }
+// else
+// {
+
+// }
 
 //대체 해주는 함수를 하나 만들자!
 
