@@ -2,55 +2,13 @@
 #include <iostream>
 #include <fstream>
 
-void	write_line(bool &first, std::ofstream &write_file, std::string line, std::string replace)
-{
-	if(first)
-	{
-		write_file << line <<replace;
-		first = false;
-	}
-	else
-	{
-		write_file << std::endl << line <<replace;
-	}
-}
-//replace 대체하기 
-void want_replace(std::ifstream &read_file, std::ofstream &write_file, char **argv)
-{
-	std::string find(argv[2]);
-	std::string replace(argv[3]);
-	std::string line;
-	bool		first = true;
-
-	while (std::getline(read_file, line))
-	{
-		size_t nPos = line.find(find);
-
-		if(nPos == std::string::npos)
-		{
-			write_line(first, write_file, line, "");
-		}
-		else
-		{
-			write_line(first, write_file, line.substr(0, nPos), replace);
-
-			std::string new_line = line.substr(nPos + find.length());
-			nPos = new_line.find(find);
-			while (nPos != std::string::npos)
-			{
-				write_file << new_line.substr(0, nPos) << replace;
-				new_line = new_line.substr(nPos + find.length());
-				nPos = new_line.find(find);
-			}
-			write_file << new_line;
-		}
-	}
-}
-
 int main(int argc, char **argv)
 {
 	std::ifstream ifs;
-	std::string str;
+	std::string origin;
+	std::string replace;
+	char c;
+	int	idx = 0;
 
 	if (argc != 4)
 	{
@@ -70,15 +28,27 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	std::cout << file_name << s1 << s2 << std::endl;//파일이름, 변경 내용, 변경할 내용
+	//std::cout << file_name << s1 << s2 << std::endl;//파일이름, 변경 내용, 변경할 내용
 	std::ofstream ofs(file_name + ".replace");//파일 만들고 .replace 이름 붙이기 
 
-	while(!ifs.eof())//한줄씩 확인 하면서
+	if(ofs.fail())
 	{
-		std::getline(ifs, str);//겟라인으로 받아옴
-		want_replace(&ifs, &ofs, ??);//replace 대체 함수
-		ofs << str << std::endl;
+		std::cout << "error ofs file not open!" << std::endl;
+		return 0;
 	}
+
+	while (ifs.get(c))//한줄씩 확인 하면서
+		origin += c;
+	while (origin.find(s1, idx) != std::string::npos)//s1 을 찾는다 idx 위치부터??
+	{
+		replace += origin.substr(idx, origin.find(s1, idx) - idx);//idx 부터 찾은애 까지 넣는다.
+		replace += s2; 
+		idx = origin.find(s1, idx) + s1.length();
+	}
+	replace += origin.substr(idx, origin.find(s1, idx));//b 다음부터 끝까지 다나옴 왜냐 s1 없는게 -1
+	std::cout << replace << std::endl;
+	ofs << replace;
+
 	ifs.close();
 	ofs.close();
 }
