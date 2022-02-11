@@ -4,7 +4,7 @@ SRCS		=Main.cpp Contact.cpp PhoneBook.cpp
 
 CPPFLAGS	=-Wall -Wextra -Werror
 
-CLANG		=g++
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 

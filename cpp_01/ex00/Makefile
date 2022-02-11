@@ -4,7 +4,7 @@ SRCS		=main.cpp NewZombie.cpp RandomChump.cpp Zombie.cpp
 
 CPPFLAGS	=-Wall -Wextra -Werror
 
-CLANG		=g++
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 

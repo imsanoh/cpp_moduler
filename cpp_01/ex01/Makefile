@@ -4,7 +4,7 @@ SRCS		=main.cpp Zombie.cpp ZombieHorde.cpp
 
 CPPFLAGS	=-Wall -Wextra -Werror
 
-CLANG		=g++
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 

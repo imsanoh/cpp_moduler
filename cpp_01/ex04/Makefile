@@ -2,16 +2,16 @@ NAME		=ex04
 
 SRCS		=main.cpp
 
-CPPFLAGS	=-Wall -Wextra -Werror
+CXXFLAGS	=-Wall -Wextra -Werror
 
-CLANG		=g++
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 
 all			:${NAME}
 
 ${NAME}		:${OBJS}
-			${CLANG} ${CPPFLAGS} -o $@ $^
+			${CXX} ${CXXFLAGS} -o $@ $^
 
 clean		:
 			rm -rf ${OBJS}

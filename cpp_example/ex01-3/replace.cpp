@@ -1,26 +1,27 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 
 int main()
 {
-	std::string sentence = "I like coding";
-	std::string find_str = "coding";
-	std::string replace_str = "history";
+	// std::string sentence = "I like coding";
+	// std::string find_str = "coding";
+	// std::string replace_str = "history";
 
-	sentence.replace(sentence.find(find_str), find_str.length(), replace_str);
+	// sentence.replace(sentence.find(find_str), find_str.length(), replace_str);
 
-	std::cout << sentence << std::endl;
+	// std::cout << sentence << std::endl;
 
-	std::string sentence = "I like coding";
-	std::string find_str = "coding";
-	std::string replace_str = "history";
+	// std::string sentence = "I like coding";
+	// std::string find_str = "coding";
+	// std::string replace_str = "history";
 
 	std::string first_name = "ha";
 	std::string last_name = "san oh";
 
 	std::cout << "first_name 의 길이: " << first_name.length() << std::endl;
 	std::cout << "last_name 의 길이 : " << last_name.length() << std::endl;
-
+/*************************************************************************/
 	std::string a = "0123456789abcdefghij";
 	// count 가 npos 이므로 pos 부터 문자열 끝까지 리턴한다.
 	std::string sub1 = a.substr(10);
