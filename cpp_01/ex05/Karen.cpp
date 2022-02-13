@@ -1,15 +1,33 @@
 #include "Karen.hpp"
 
+void Karen::debug(void)
+{
+	std::cout <<  << std::endl;
+}
+
+void Karen::info(void)
+{
+	std::cout <<  << std::endl;
+}
+
+void Karen::warning(void)
+{
+	std::cout <<  <<std::endl;
+}
+
+void Karen::error(void)
+{
+	std::cout<<  <<std::endl;
+}
+
 Karen::Karen()
 {
-	std::cout << "DEBUG level: I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I just love it!"
+	debug
+	info
+	warning
+	error
 }
 
 Karen::~Karen()
 {
-}
-
-void Karen::debug(void)
-{
-	std::cout <<  << std::endl;
 }
