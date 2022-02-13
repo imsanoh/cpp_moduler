@@ -16,7 +16,3 @@ class HumanB
 };
 
 #endif
-
-
-//std::string 
-//

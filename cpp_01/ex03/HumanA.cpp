@@ -12,4 +12,3 @@ void HumanA::attack()
 {
 	std::cout << this->_name << "attacks with his" << weapon.getType() << std::endl;
 }
-//this -> 포인터

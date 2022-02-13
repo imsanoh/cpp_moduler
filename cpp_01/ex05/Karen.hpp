@@ -1,6 +1,13 @@
 #ifndef KAREN_HPP
 # define KAREN_HPP
 
+# include <iostream>
+
+# define DEBUG 1
+# define INFO 2
+# define WARNING 3
+# define ERROR 4
+
 class Karen
 {
 	private:
@@ -9,9 +16,9 @@ class Karen
 		void warning(void);
 		void error(void);
 	public:
-		Karen(/* args*/);
-		Karen(const Karen &ref);
+		Karen(void);
 		~Karen();
-};
+		void complain(std::string);
+}
 
 #endif
