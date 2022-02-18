@@ -10,8 +10,11 @@ class Fixed
 		static const int frac_bits;
 	public:
 		Fixed(void);
-		Fixed(const Fixed &ref);
 		~Fixed();
+		Fixed(const Fixed &ref);
+		float toFloat( void ) const;
+		int toInt( void ) const;
+
 
 		Fixed& operator=(const Fixed &ref);
 

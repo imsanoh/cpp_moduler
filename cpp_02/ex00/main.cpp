@@ -8,9 +8,9 @@ int main(void)
 
 	c = b;
 
-	std::cout << a.getRaWBits() << std::endl;
-	std::cout << b.getRaWBits() << std::endl;
-	std::cout << c.getRaWBits() << std::endl;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 
 	return 0;
 }
