@@ -12,8 +12,8 @@ class Fixed
 		Fixed(void);
 		~Fixed();
 		Fixed(const Fixed &ref);
-		float toFloat( void ) const;
-		int toInt( void ) const;
+		float toFloat(void) const;
+		int toInt(void) const;
 
 
 		Fixed& operator=(const Fixed &ref);
@@ -23,3 +23,4 @@ class Fixed
 };
 
 #endif
+//연산자 오버로딩
