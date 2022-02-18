@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	Fixed a;
+	Fixed a;//객체에 생성하는 애들을 인스턴스라고 함
 	Fixed b (a);
 	Fixed c;
 
