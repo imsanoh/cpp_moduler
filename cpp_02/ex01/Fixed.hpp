@@ -2,12 +2,13 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <string>
 
 class Fixed
 {
 	private:
 		int value;
-		static const int frac_bits;
+		static const int fractional_bits;
 	public:
 		Fixed(void);
 		~Fixed();

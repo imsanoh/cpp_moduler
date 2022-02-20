@@ -1,6 +1,6 @@
 NAME		=ex05
 
-SRCS		=main.cpp
+SRCS		=main.cpp Karen.cpp
 
 CXXFLAGS	=-Wall -Wextra -Werror
 
