@@ -13,15 +13,16 @@ class Fixed
 		Fixed(void);
 		~Fixed();
 		Fixed(const Fixed &ref);
-		float toFloat(void) const;
-		int toInt(void) const;
-
 
 		Fixed& operator=(const Fixed &ref);
 
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
+
+		float toFloat(void) const;
+		int toInt(void) const;
 };
 
 #endif
 //연산자 오버로딩
+//int -> 

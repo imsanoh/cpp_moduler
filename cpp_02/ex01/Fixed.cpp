@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-const int Fixed::frac_bits = 8;
+const int Fixed::fractional_bits = 8;
 
 Fixed::Fixed()
 {
@@ -8,10 +8,15 @@ Fixed::Fixed()
 	value = 0;
 }
 
-Fixed::Fixed(const Fixed &ref)
+Fixed::Fixed(const Fixed& ref)//이렇게 해야 합니다.
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = ref;
+}
+
+Fixed::Fixed(const int i)
+{
+
 }
 
 Fixed::~Fixed()
@@ -19,11 +24,17 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed& Fixed::operator=(const Fixed &ref) //
+Fixed& Fixed::operator=(const Fixed& ref) //
 {
 	std::cout << "Assignation operator called" << std::endl;
 	this->value = ref.getRawBits();
 	return (*this);
+}
+
+int	Fixed::getRawBits(void) const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return this->value;
 }
 
 void	Fixed::setRawBits(int const raw)
@@ -31,8 +42,12 @@ void	Fixed::setRawBits(int const raw)
 	this->value = raw;
 }
 
-int	Fixed::getRawBits(void) const
+float	Fixed::toFloat(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
-	return this->value;
+	return ((float)value / (1 << fractional_bits));
+}
+
+int	Fixed::toInt(void) const
+{
+	return (value >> 8);
 }

@@ -1,17 +1,17 @@
-NAME		=ex03
+NAME		=ex05
 
-SRCS		=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS		=main.cpp Karen.cpp
 
-CPPFLAGS	=-Wall -Wextra -Werror
+CXXFLAGS	=-Wall -Wextra -Werror
 
-CXX		=c++ -std=c++98
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 
 all			:${NAME}
 
 ${NAME}		:${OBJS}
-			${CLANG} ${CPPFLAGS} -o $@ $^
+			${CXX} ${CXXFLAGS} -o $@ $^
 
 clean		:
 			rm -rf ${OBJS}
