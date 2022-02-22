@@ -15,4 +15,3 @@ int main()
 	(Karen::*func)(void);
 	return 0;
 }
-
