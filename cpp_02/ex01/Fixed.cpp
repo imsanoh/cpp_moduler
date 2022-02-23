@@ -20,6 +20,8 @@ Fixed::Fixed(const int i)
 	value = i << fractional_bits;
 }
 
+Fixed::Fixed(float )
+
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
