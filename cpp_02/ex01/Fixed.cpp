@@ -16,7 +16,8 @@ Fixed::Fixed(const Fixed& ref)//이렇게 해야 합니다.
 
 Fixed::Fixed(const int i)
 {
-
+	std::cout << "Int constructor called" << std::endl;
+	value = i << fractional_bits;
 }
 
 Fixed::~Fixed()
