@@ -21,4 +21,8 @@ fclean		:clean
 
 re			:fclean all
 
+<<<<<<< HEAD
 .PHONY		:	all clean fclean re
+=======
+.PHONY		:	all clean fclean re
+>>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442

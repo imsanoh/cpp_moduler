@@ -4,7 +4,7 @@ SRCS		=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 CPPFLAGS	=-Wall -Wextra -Werror
 
-CXX		=c++
+CXX		=c++ -std=c++98
 
 OBJS		=${SRCS:.cpp=.o}
 

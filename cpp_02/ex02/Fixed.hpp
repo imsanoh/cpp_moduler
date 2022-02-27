@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef FIXED_H
 # define FIXED_H
 
@@ -21,3 +22,20 @@ public:
 };
 
 #endif
+=======
+#ifndef FIXED_HPP
+# define FIXED_HPP
+
+class Fixed
+{
+	private:
+		/* data */
+	public:
+		Fixed(/* args*/);
+		Fixed(const Fixed &ref);
+		~Fixed();
+		Fixed& operator=(const Fixed &ref);
+};
+
+#endif
+>>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442
