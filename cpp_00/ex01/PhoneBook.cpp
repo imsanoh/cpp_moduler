@@ -45,10 +45,10 @@ void	PhoneBook::show()
 
 void	PhoneBook::show_contacts(unsigned int index)
 {
-	this->contacts[index].show_information();
+	this->contacts[index].show_information();//참조
 }
 
-void	PhoneBook::search() // 내 방식으로 바꾸기
+void	PhoneBook::search()
 {
 	unsigned int	index;
 

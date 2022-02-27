@@ -10,7 +10,7 @@ private:
 	unsigned int	count;
 	unsigned int	reset;
 public:
-	PhoneBook(/* args */);
+	PhoneBook();
 	~PhoneBook();
 	void	add();
 	void	search();

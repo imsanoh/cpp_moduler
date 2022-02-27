@@ -1,8 +1,8 @@
-NAME		=ex05
+NAME		=megaphone
 
-SRCS		=main.cpp Karen.cpp
+SRCS		=Main.cpp Contact.cpp PhoneBook.cpp
 
-CXXFLAGS	=-Wall -Wextra -Werror
+CPPFLAGS	=-Wall -Wextra -Werror
 
 CXX		=c++
 
@@ -11,7 +11,7 @@ OBJS		=${SRCS:.cpp=.o}
 all			:${NAME}
 
 ${NAME}		:${OBJS}
-			${CXX} ${CXXFLAGS} -o $@ $^
+			${CLANG} ${CPPFLAGS} -o $@ $^
 
 clean		:
 			rm -rf ${OBJS}
