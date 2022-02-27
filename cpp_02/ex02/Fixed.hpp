@@ -1,41 +1,33 @@
-<<<<<<< HEAD
-#ifndef FIXED_H
-# define FIXED_H
-
-# include <iostream>
-
-class Fixed
-{
-private:
-	int value;
-	static const int fractional_bits;
-public:
-	Fixed(void);
-	~Fixed();
-	Fixed(const Fixed &ref);
-
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
-
-	float toFloat(void) const;
-	int toInt(void) const;
-};
-
-#endif
-=======
 #ifndef FIXED_HPP
 # define FIXED_HPP
+
+#include <iostream>
+#include <string>
 
 class Fixed
 {
 	private:
-		/* data */
+		int value;
+		static const int fractional_bits;
 	public:
-		Fixed(/* args*/);
-		Fixed(const Fixed &ref);
+		Fixed(void);
 		~Fixed();
+		Fixed(const Fixed &ref);
+
 		Fixed& operator=(const Fixed &ref);
+
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+
+		float toFloat(void) const;
+		int toInt(void) const;
 };
 
 #endif
->>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442
+//연산자 오버로딩
+//int -> 
+
+
++ - * /
+> < >= <= == != 
+존나 작은수 

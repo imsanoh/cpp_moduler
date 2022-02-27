@@ -4,7 +4,7 @@ SRCS		=Fixed.cpp main.cpp
 
 CPPFLAGS	= -Wall -Wextra -Werror
 
-CXX		=c++ std=c++98
+CXX		=c++
 
 OBJS		=${SRCS:.cpp=.o}
 
