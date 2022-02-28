@@ -7,12 +7,19 @@
 class ClapTrap
 {
 	private:
-		/* data */
+		void name;
+		int hitpoint;
+		void Energy;
+		void Attack;
 	public:
-		ClapTrap(/* args*/);
-		ClapTrap(const ClapTrap &ref);
+		ClapTrap();
 		~ClapTrap();
+		
 		ClapTrap& operator=(const ClapTrap &ref);
+		
+		void attack(std::string const & target)
+		void takeDamage(unsigned int amount)
+		void beRepaired(unsigned int amount)
 };
 
 #endif
