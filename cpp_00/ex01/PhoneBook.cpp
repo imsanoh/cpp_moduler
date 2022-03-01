@@ -45,10 +45,10 @@ void	PhoneBook::show()
 
 void	PhoneBook::show_contacts(unsigned int index)
 {
-	this->contacts[index].show_information();//참조
+	this->contacts[index].show_information();//참조자
 }
 
-void	PhoneBook::search()
+void	PhoneBook::search()//??
 {
 	unsigned int	index;
 

@@ -9,7 +9,7 @@ int main()
 	while (cmd.compare ("EXIT"))
 	{
 		std::cout << "명령어를 입력하십시오" << std::endl;
-		std::getline(std::cin, cmd);
+		std::getline(std::cin, cmd);//getline?
 		if (!cmd.compare("ADD"))
 			phonebook.add();
 		if(cmd.compare("SEARCH"))

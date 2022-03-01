@@ -16,19 +16,19 @@ class Contact
 
 	public:
 
-	Contact();
-	~Contact();
+	Contact();//생성자
+	~Contact();//소멸자
 
 	void Contact::set_serise();
 	void Contact::show_information();
 
-	void set_FirstName(const std::string str);
+	void set_FirstName(const std::string str);//?
 	void set_LastName(const std::string str);
 	void set_NickName(const std::string str);
 	void set_DarkestSecret(const std::string str);
 	void set_PhoneNumber(const std::string str);
 
-	std::string get_FirstName();
+	std::string get_FirstName();//?
 	std::string get_LastName();
 	std::string get_NickName();
 	std::string get_PhoneNumber();
