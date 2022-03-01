@@ -7,7 +7,7 @@ Contact::Contact()
 Contact::~Contact()
 {
 }
-
+//getline? ->
 void Contact::set_serise()
 {
 	std::cout << "Enter First Name" << std::endl;
@@ -30,22 +30,23 @@ void	Contact::show_information()
 	std::cout << "Numaber: " << this->PhoneNumber << std::endl;
 	std::cout << "The Darkest Secret: " << this->DarkestSecret << std::endl;
 }
+//this? -> this는 객체 자신의 주소값입니다
 std::string	Contact::get_FirstName()
 {
-	return (this->FirstName);
+	return (this->FirstName);//this 사용
 }
 
 std::string Contact::get_LastName()
 {
-	return (this->LastName);
+	return (this->LastName);//this 사용
 }
 
 std::string	Contact::get_NickName()
 {
-	return (this->NickName);
+	return (this->NickName);//this 사용
 }
 
 std::string Contact::get_PhoneNumber()
 {
-	return (this->PhoneNumber);
+	return (this->PhoneNumber);//this 사용
 }

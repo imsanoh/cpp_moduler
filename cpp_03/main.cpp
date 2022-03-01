@@ -7,7 +7,7 @@ int	main(void)
 	ClapTrap	c("C");
 
 	a.attack("B"); // 'a' 가 'B'를 공격 했다.
-	b.takeDamage(a.getDamage()); //td->
+	b.takeDamage(a.getDamage()); //b가 td 되었다, a 에 의해 (gd 얼마만큼)
 	b.attack("A");
 	a.takeDamge(a.getDamage());
 	c.attack("B");
