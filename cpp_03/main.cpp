@@ -1,1 +1,7 @@
-#include "claptrap"
+#include "claptrap.hpp"
+
+int	main(void)
+{
+	claptrap
+	claptrap
+}

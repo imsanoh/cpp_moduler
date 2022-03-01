@@ -2,7 +2,8 @@
 
 ClapTrap::ClapTrap()
 {
-	name
+	name = "something";
+	hitpoint = 10;
 }
 
 ClapTrap::ClapTrap( std::string str )
@@ -21,7 +22,8 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &ref)
 
 void	ClapTrap::attack(std::string const& target)
 {
-
+	std::cout << "ClapTrap : " << std::endl;
+	std::cout << name << "attack " 
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
