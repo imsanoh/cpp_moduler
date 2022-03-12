@@ -25,3 +25,6 @@ class ClapTrap
 }; //안나와 있어서 안씀
 
 #endif
+
+//private protected public
+//이 세개를 잘 이용해야 한다.
