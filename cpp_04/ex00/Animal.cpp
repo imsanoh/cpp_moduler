@@ -2,20 +2,27 @@
 
 Animal::Animal()
 {
+	type = "Animal";
 }
 
-Animal::Animal(const Animal &ref)
-{
-	*this = ref;
-}
+// Animal::Animal(const Animal &ref)
+// {
+// 	*this = ref;
+// }
 
-Animal::~Animal()
-{
-}
+ Animal::~Animal()
+ {
+ }
 
-Animal& Animal::operator=(const Animal &ref)
+//  Animal& Animal::operator=(const Animal &ref)
+//  {
+//  	return (*this);
+//  }
+
+std::string		Animal::getType(void) const
 {
-	return (*this);
+	std::cout << "getType member called" << std::endl;
+	return this->type;
 }
 
 void	Animal::makeSound()
