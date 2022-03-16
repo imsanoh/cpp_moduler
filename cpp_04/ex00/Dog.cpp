@@ -17,3 +17,8 @@ Dog& Dog::operator=(const Dog &ref)
 {
 	return (*this);
 }
+
+void	Dog::makeSound()
+{
+	std::cout << "멍멍" << std::endl;	
+}

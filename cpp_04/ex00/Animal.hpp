@@ -6,7 +6,7 @@ class Animal
 	protected:
 		std::stirng type;
 	public:
-		Animal(/* args*/);
+		Animal();
 		Animal(const Animal &ref);
 		~Animal();
 		Animal& operator=(const Animal &ref);
