@@ -22,7 +22,7 @@ void	Contact::set_information()
 	std::getline(std::cin, this->DarkestSecret);
 }
 
-void	Contact::show_infromation()
+void	Contact::show_information()
 {
 	std::cout << "First name : " << this->FirstName << std::endl;//this->F~ -> 자기 자신의 주소값을 넣어주는겁니다.
 	std::cout << "Last name : " << this->LastName << std::endl;
