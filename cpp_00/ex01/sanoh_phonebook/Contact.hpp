@@ -15,12 +15,11 @@ private:
 	std::string DarkestSecret;
 
 public:
-
 	Contact();//생성자
 	~Contact();//소멸자
 
-	void Contact::show_infromation();
-	void Contact::set_information();
+	void	set_information();
+	void	show_infromation();
 
 	void set_FirstName(const std::string str);//인자에 실제 값을 넣어주기 위해 존재 합니다.
 	void set_LastName(const std::string str);
