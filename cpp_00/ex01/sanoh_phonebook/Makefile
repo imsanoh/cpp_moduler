@@ -1,4 +1,4 @@
-NAME		=megaphone
+NAME		=PhoneBook
 
 SRCS		=Main.cpp Contact.cpp PhoneBook.cpp
 
@@ -11,7 +11,7 @@ OBJS		=${SRCS:.cpp=.o}
 all			:${NAME}
 
 ${NAME}		:${OBJS}
-			${CLANG} ${CPPFLAGS} -o $@ $^
+			${CXX} ${CPPFLAGS} -o $@ $^
 
 clean		:
 			rm -rf ${OBJS}
