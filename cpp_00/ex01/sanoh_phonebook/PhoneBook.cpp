@@ -8,7 +8,7 @@ Phonebook::~Phonebook()
 {
 }
 
-void	PhoneBook::add()
+void	Phonebook::add()
 {
 	this->contacts[this->reset].set_information();
 	if (count < 8)
@@ -18,26 +18,26 @@ void	PhoneBook::add()
 		reset = 0;
 }
 
-void	PhoneBook::show()
+void	Phonebook::show()
 {
 	std::cout << " something" << std::endl;
 	for (unsigned int i = 0; i < this->count; i++)
 	{
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		if (this->contacts[i].get_FirstName().length() > 9)
-			std::cout << this->contacts[i].get_FirstName().substr(0, 9) << ".|"
+			std::cout << this->contacts[i].get_FirstName().substr(0, 9) << ".|";
 		else
 			std::cout << std::setw(10) << this->contacts[i].get_FirstName() << "|";
 
 		if (this->contacts[i].get_LastName().length() > 9)
-			std::cout << this->contacts[i].get_LastName().substr(0, 9) << ".|"
+			std::cout << this->contacts[i].get_LastName().substr(0, 9) << ".|";
 		else
-			std::cout << std::setw(10) << this->contacts[i].get_LastName() << "|"
+			std::cout << std::setw(10) << this->contacts[i].get_LastName() << "|";
 
 		if (this->contacts[i].get_NickName().length() > 9)
-			std::cout << this->contacts[i].get_NickName().substr(0, 9) << ".|"
+			std::cout << this->contacts[i].get_NickName().substr(0, 9) << ".|";
 		else
-			std::cout << std::setw(10) << this->contacts[i].get_NickName() << "|"
+			std::cout << std::setw(10) << this->contacts[i].get_NickName() << "|";
 
 		if (this->contacts[i].get_PhoneNumber().length() > 9)
 			std::cout << this->contacts[i].get_PhoneNumber().substr(0, 9) << ".|" << std::endl;
@@ -46,12 +46,12 @@ void	PhoneBook::show()
 	}
 }
 
-void	PhoneBook::show_contacts(unsigned int index)
+void	Phonebook::show_contacts(unsigned int index)
 {
 	this->contacts[index].show_information();//참조자
 }
 
-void	PhoneBook::search()
+void	Phonebook::search()
 {
 	unsigned int	index;
 

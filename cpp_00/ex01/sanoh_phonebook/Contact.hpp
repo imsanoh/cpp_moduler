@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class Contact
 {
@@ -19,7 +20,7 @@ public:
 	~Contact();//소멸자
 
 	void	set_information();
-	void	show_infromation();
+	void	show_information();
 
 	void set_FirstName(const std::string str);//인자에 실제 값을 넣어주기 위해 존재 합니다.
 	void set_LastName(const std::string str);
