@@ -2,6 +2,8 @@
 
 Phonebook::Phonebook()
 {
+	reset = 0;
+	count = 0;
 }
 
 Phonebook::~Phonebook()
@@ -10,17 +12,18 @@ Phonebook::~Phonebook()
 
 void	Phonebook::add()
 {
-	this->contacts[this->reset].set_information();
-	if (count < 8)
-		count++;
-	reset++;
 	if (reset == 8)
 		reset = 0;
+	contacts[reset].set_information();
+	reset++;
+	if (count < 8)
+		count++;
 }
 
 void	Phonebook::show()
 {
 	std::cout << " something" << std::endl;
+
 	for (unsigned int i = 0; i < this->count; i++)
 	{
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
@@ -62,7 +65,7 @@ void	Phonebook::search()
 		this->show();
 		while (true)
 		{
-			std::cout << "Enter an index of searching contact or 0 to exit" << std::endl;
+			std::cout << "Enter an index of searching contact or 0  " << std::endl;
 			if ((std::cin >> index) && (index == 0 || index - 1 < this->count))
 			{
 				if (index - 1 < this->count)
@@ -88,3 +91,4 @@ void	Phonebook::search()
 		}
 	}
 }
+//일단 서치 고치기 1. 0일때만 나가게하기 2. 안덱스찾으면 그 줄만 보여주기 

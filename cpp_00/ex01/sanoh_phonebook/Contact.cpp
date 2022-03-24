@@ -3,23 +3,30 @@
 Contact::Contact()
 {
 }
-
 Contact::~Contact()
 {
 }
 //getline? -> 함수는 입력 스트림에서 문자들을 읽어서, 인자로 받은 문자열에 저장합니다.
 void	Contact::set_information()
 {
+	std::string tmp;
 	std::cout << "Enter First Name" << std::endl;
 	std::getline(std::cin, this->FirstName);//cin 으로 받아서 this 에 저장 다시 그걸 FirstName 에 저장 합니다.
+	//FirstName = tmp;
+	std::cout << FirstName << std::endl;
 	std::cout << "Enter Last Name" <<std::endl;
-	std::getline(std::cin, this->LastName);
-	std::cout << "Enter Nick Name" << std::endl;
-	std::getline(std::cin, this->NickName);
+	std::getline(std::cin, tmp);
+	LastName = tmp;
+	std::cout << LastName << std::endl;
+	std::cout << "Enter Nickki Name" << std::endl;
+	std::getline(std::cin, tmp);
+	NickName = tmp;
 	std::cout << "Enter PhoneNumber" << std::endl;
-	std::getline(std::cin, this->PhoneNumber);
+	std::getline(std::cin, tmp);
+	PhoneNumber = tmp;
 	std::cout << "Enter DarkestSecret" << std::endl;
-	std::getline(std::cin, this->DarkestSecret);
+	std::getline(std::cin, tmp);
+	DarkestSecret = tmp;
 }
 
 void	Contact::show_information()
