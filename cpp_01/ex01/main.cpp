@@ -1,17 +1,18 @@
 #include "Zombie.hpp"
 
-int main()
+int main(void)
 {
 	Zombie *zombies;
 
-	int N = 20;
+	int N = 5;
 
-	zombies = zombieHorde(N, "sanoh");
+	zombies = zombieHorde(N, "zombie");
 	for (int i = 0; i < N; i++)
 	{
 		zombies[i].announce();
 	}
 	delete []zombies;
+	return 0;
 }
 
 //참조 . 포인터 ->
