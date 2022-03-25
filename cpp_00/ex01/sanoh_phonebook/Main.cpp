@@ -13,12 +13,12 @@ int main()
 		std::getline(std::cin, cmd);//getline?
 		if (!cmd.compare("ADD"))
 			phonebook.add();
-		if(!cmd.compare("SEARCH"))
+		else if(!cmd.compare("SEARCH"))
 		{
 			phonebook.search();
-			phonebook.show();
+			// phonebook.show();
 		}
-		if(!cmd.compare("EXIT"))
+		else if(!cmd.compare("EXIT"))
 			break;
 		else
 			std::cout << "명령어 없음" << std::endl;

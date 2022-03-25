@@ -1,5 +1,5 @@
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 <<<<<<< HEAD
 # include <iostream>

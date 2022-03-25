@@ -1,6 +1,6 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
-Karen::Karen()
+Harl::Harl()
 <<<<<<< HEAD
 {
 	str[0] = "DEBUG";
@@ -8,17 +8,17 @@ Karen::Karen()
 	str[2] = "WARNING";
 	str[3] = "ERROR";
 
-	complain_level[0] = &Karen::debug;
-	complain_level[1] = &Karen::info;
-	complain_level[2] = &Karen::warning;
-	complain_level[3] = &Karen::error;
+	complain_level[0] = &Harl::debug;
+	complain_level[1] = &Harl::info;
+	complain_level[2] = &Harl::warning;
+	complain_level[3] = &Harl::error;
 }
 
-Karen::~Karen()
+Harl::~Harl()
 {
 }
 
-void Karen::debug(void)
+void Harl::debug(void)
 {
 	std::cout << "[ DEBUG ]" << std::endl;
 	std::cout << "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger." << std::endl;
@@ -27,7 +27,7 @@ void Karen::debug(void)
 >>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442
 }
 
-Karen::~Karen()
+Harl::~Harl()
 {
 <<<<<<< HEAD
 	std::cout << "[ INFO ]" << std::endl;
@@ -36,7 +36,7 @@ Karen::~Karen()
 >>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442
 }
 
-void	Karen::debug(void)
+void	Harl::debug(void)
 {
 <<<<<<< HEAD
 	std::cout << "[ WARNING ]" << std::endl;
@@ -46,14 +46,14 @@ void	Karen::debug(void)
 >>>>>>> b8ab7de551d19187c23c5e77660a4e8c43107442
 }
 
-void	Karen::info(void)
+void	Harl::info(void)
 {
 <<<<<<< HEAD
 	std::cout << "[ ERROR ]" << std::endl;
 	std::cout << "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger." << std::endl;
 }
 
-void	Karen::complain(std::string level)
+void	Harl::complain(std::string level)
 {
 	for (int i = 0; i < 4; i++)
 	{
@@ -65,17 +65,17 @@ void	Karen::complain(std::string level)
 	std::cout <<"말할거" << std::endl;
 }
 
-void	Karen::warning(void)
+void	Harl::warning(void)
 {
 	std::cout << "말할거" << std::endl;
 }
 
-void	Karen::error(void)
+void	Harl::error(void)
 {
 	std::cout << "말할거" << std::endl;
 }
 
-void	Karen::complain(std::string level)
+void	Harl::complain(std::string level)
 {
 	for (int i = 0; i < 4 i++)
 	{

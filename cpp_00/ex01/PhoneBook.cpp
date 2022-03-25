@@ -1,29 +1,32 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook()
+Phonebook::Phonebook()
+{
+	reset = 0;
+	count = 0;
+}
+
+Phonebook::~Phonebook()
 {
 }
 
-PhoneBook::~PhoneBook()
+void	Phonebook::add()
 {
-}
-
-void	PhoneBook::add()
-{
-	this->contacts[this->reset].set_serise();
-	if (count < 8)
-		count++;
-	reset++;
 	if (reset == 8)
 		reset = 0;
+	contacts[reset].set_information();
+	reset++;
+	if (count < 8)
+		count++;
 }
 
-void	PhoneBook::show()
+void	Phonebook::show()
 {
-	std::cout << "|     Index|First name| Last name|  Nickname|    Number|" << std::endl;// 가장 처음에 나와야 하는거=
+	std::cout << " something" << std::endl;
+
 	for (unsigned int i = 0; i < this->count; i++)
 	{
-		std::cout << "|" << std::setw(10) << i + 1<< "|";
+		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		if (this->contacts[i].get_FirstName().length() > 9)
 			std::cout << this->contacts[i].get_FirstName().substr(0, 9) << ".|";
 		else
@@ -42,39 +45,40 @@ void	PhoneBook::show()
 		if (this->contacts[i].get_PhoneNumber().length() > 9)
 			std::cout << this->contacts[i].get_PhoneNumber().substr(0, 9) << ".|" << std::endl;
 		else
-			std::cout << std::setw(10) << this->contacts[i].get_PhoneNumber() << "|" << std::endl;
+			std::cout << std::setw(10) << this->contacts[i].get_PhoneNumber() << "|" <<std::endl;
 	}
 }
 
-void	PhoneBook::show_contacts(unsigned int index)
+void	Phonebook::show_contacts(unsigned int index)
 {
 	this->contacts[index].show_information();//참조자
 }
 
-void	PhoneBook::search()//??
+void	Phonebook::search()
 {
 	unsigned int	index;
 
 	if (this->count == 0)
-		std::cout << "Phonebook is empty!" << std::endl;
+		std::cout << "PhoneBook is Empty" << std::endl;//
 	else
 	{
 		this->show();
 		while (true)
 		{
-			std::cout << "Enter an index of searching contact or 0 to exit" << std::endl;
+			std::cout << "Enter an index of searching contact or 0  " << std::endl;
 			if ((std::cin >> index) && (index == 0 || index - 1 < this->count))
 			{
 				if (index - 1 < this->count)
 				{
 					this->show_contacts(index - 1);
+					//cin.ignore->cin.ignore();는 버퍼 전체를 비우는것이 아니라 맨 앞의 문자하나를 지운다. getline(읽어올 입력스트림, 저장할 문자열변수)
 					std::cin.ignore(100000000000, '\n');//getline
 					break ;
 				}
 				else
 				{
 					std::cin.clear();//??
-					std::cin.ignore(100000000000, '\n');//무시하는길이 ??
+					std::cin.ignore(100000000000, '\n');//무시하는길이
 					break ;
 				}
 			}
@@ -87,3 +91,4 @@ void	PhoneBook::search()//??
 		}
 	}
 }
+//일단 서치 고치기 1. 0일때만 나가게하기 2. 안덱스찾으면 그 줄만 보여주기 

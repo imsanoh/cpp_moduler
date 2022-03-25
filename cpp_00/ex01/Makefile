@@ -1,8 +1,8 @@
 NAME		=PhoneBook
 
-SRCS		=Main.cpp Contact.cpp PhoneBook.cpp
+SRCS		=Main.cpp PhoneBook.cpp Contact.cpp 
 
-CPPFLAGS	=-Wall -Wextra -Werror
+CPPFLAGS	=-Wall -Wextra -Werror -g3 -fsanitize=address
 
 CXX		=c++
 
