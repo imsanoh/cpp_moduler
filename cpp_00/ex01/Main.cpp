@@ -16,7 +16,6 @@ int main()
 		else if(!cmd.compare("SEARCH"))
 		{
 			phonebook.search();
-			// phonebook.show();
 		}
 		else if(!cmd.compare("EXIT"))
 			break;
