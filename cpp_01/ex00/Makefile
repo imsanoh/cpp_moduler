@@ -1,8 +1,8 @@
 NAME		=zombie
 
-SRCS		=main.cpp NewZombie.cpp RandomChump.cpp Zombie.cpp
+SRCS		=main.cpp Zombie.cpp NewZombie.cpp RandomChump.cpp
 
-CPPFLAGS	=-Wall -Wextra -Werror
+CPPFLAGS	=-Wall -Wextra -Werror -g3 -fsanitize=address
 
 CXX		=c++
 
