@@ -27,6 +27,6 @@ std::string		Cat::getType(void) const
 
 void	Cat::makeSound()
 {
-	std::cout << "	야옹" << std::endl;	
+	std::cout << "야옹" << std::endl;	
 }
 
