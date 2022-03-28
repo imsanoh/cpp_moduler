@@ -16,7 +16,6 @@ class Fixed
 		Fixed(const float f);
 		Fixed(const Fixed& fixed);
 		~Fixed();
-		Fixed(const Fixed &ref);
 
 		Fixed& operator=(const Fixed &ref);
 
