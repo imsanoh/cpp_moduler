@@ -12,15 +12,15 @@ Phonebook::~Phonebook()
 
 void	Phonebook::add()
 {
-	if (reset == 8)
+	if (reset == 8)//어디에 쓰는건가요?
 		reset = 0;
 	contacts[reset].set_information();
 	reset++;
-	if (count < 8)
+	if (count < 8)//어디에 쓰는건가요?
 		count++;
 }
 
-void	Phonebook::show()
+void	Phonebook::show()//???
 {
 	std::cout << " something" << std::endl;
 
@@ -72,7 +72,7 @@ void	Phonebook::search()
 				{
 					this->show_contacts(index - 1);
 					//cin.ignore->cin.ignore();는 버퍼 전체를 비우는것이 아니라 맨 앞의 문자하나를 지운다. getline(읽어올 입력스트림, 저장할 문자열변수)
-					std::cin.ignore(100000000000, '\n');//getline
+					std::cin.ignore(100000000000, '\n');//getline-? 대신 사용하는겁니다.
 					break ;
 				}
 				else

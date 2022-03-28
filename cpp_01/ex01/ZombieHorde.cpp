@@ -7,7 +7,6 @@ Zombie *zombieHorde(int N, std::string name)
 	for (int i = 0; i < N; i++)
 	{
 		//좀비수가 정해짐
-		//if()
 		//좀비 수 만큼 이름을 정해줌
 		std::stringstream stream;
 		stream << i + 1;
@@ -15,4 +14,3 @@ Zombie *zombieHorde(int N, std::string name)
 	}
 	return (zombies);
 }
-// zombies == &zombies[0]
