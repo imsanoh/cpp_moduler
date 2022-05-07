@@ -12,22 +12,22 @@ Phonebook::~Phonebook()
 
 void	Phonebook::add()
 {
-	if (reset == 8)//어디에 쓰는건가요?
+	if (reset == 8)//어디에 쓰는건가요? -> 8개가 채워지면 다시 0으로 초기화 해줍니다.
 		reset = 0;
-	contacts[reset].set_information();
+	contacts[reset].set_information(); // -> 이게 그럼 8개가 되면 다시 0으로 가겠지요?
 	reset++;
-	if (count < 8)//어디에 쓰는건가요?
+	if (count < 8)//어디에 쓰는건가요? -> 8갸 까지 올려주는거 입니다,
 		count++;
 }
 
-void	Phonebook::show()//???
+void	Phonebook::show()//줄을 보여줍니다 
 {
 	std::cout << " something" << std::endl;
 
 	for (unsigned int i = 0; i < this->count; i++)
 	{
-		std::cout << "|" << std::setw(10) << i + 1 << "|";
-		if (this->contacts[i].get_FirstName().length() > 9)
+		std::cout << "|" << std::setw(10) << i + 1 << "|";//10칸 확보 
+		if (this->contacts[i].get_FirstName().length() > 9)//안에 넣는 작업
 			std::cout << this->contacts[i].get_FirstName().substr(0, 9) << ".|";
 		else
 			std::cout << std::setw(10) << this->contacts[i].get_FirstName() << "|";
@@ -71,21 +71,21 @@ void	Phonebook::search()
 				if (index - 1 < this->count)
 				{
 					this->show_contacts(index - 1);
-					//cin.ignore->cin.ignore();는 버퍼 전체를 비우는것이 아니라 맨 앞의 문자하나를 지운다. getline(읽어올 입력스트림, 저장할 문자열변수)
-					std::cin.ignore(100000000000, '\n');//getline-? 대신 사용하는겁니다.
+					//cin.clear()를 통해 에러비트를 초기화하고, cin.ignore()를 통해 두 번째 인자인 개행으로 버퍼를 계속 비워주겠다는 뜻이다.
+					std::cin.ignore(1, '\n');//getline-? 대신 사용하는겁니다.
 					break ;
 				}
 				else
-				{
-					std::cin.clear();//??
-					std::cin.ignore(100000000000, '\n');//무시하는길이
+				{//cin.clear()를 통해 에러비트를 초기화하고, cin.ignore()를 통해 두 번째 인자인 개행으로 버퍼를 계속 비워주겠다는 뜻이다.
+					std::cin.clear();//-> 내부 상태 플래그를 초기화 시킴 -> 결국 cin 이 정상적으로 작동하게 하기 위해서.
+					std::cin.ignore(1, '\n');//무시하는길이
 					break ;
 				}
 			}
 			else
 			{
 				std::cin.clear();
-				std::cin.ignore(100000000000, '\n');
+				std::cin.ignore(1, '\n');
 				std::cout << "Invalid index!" << std::endl;
 			}
 		}

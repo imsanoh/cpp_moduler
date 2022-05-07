@@ -30,7 +30,7 @@ void	Contact::show_information()
 	std::cout << "PhoneNumber : " << this->PhoneNumber << std::endl;
 	std::cout << "DarkestSecret : " << this->DarkestSecret << std::endl;
 }
-//this? -> this는 객체 자신의 주소값입니다
+//this? -> this는 객체 자신의 주소값입니다 -> 결국 자기 자신의 값을 자기 자신에게 넣는것입니다.
 std::string	Contact::get_FirstName()
 {
 	return (this->FirstName);//this 사용

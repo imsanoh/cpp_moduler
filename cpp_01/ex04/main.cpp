@@ -4,13 +4,13 @@
 
 int main(int argc, char **argv)
 {
-	std::ifstream ifs;
-	std::string origin;
-	std::string replace;
+	std::ifstream ifs;//ifs 라는 ifstream 객체를 생성합니다.
+	std::string origin;//이 단어
+	std::string replace;//이걸로 대체 
 	char c;
-	int	idx = 0;
+	int	idx = 0;//초기화
 
-	if (argc != 4)
+	if (argc != 4)//명령어 4개가 다 안들어오면 나올 오류
 	{
 		std::cout << "error!" << std::endl;
 		return 0;
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
 	std::string file_name(argv[1]);//첫번째로 받는거: 파일이름
 	std::string s1(argv[2]);//두번째로 받는거 바꿀거
-	std::string s2(argv[3]);//세번쨰로 받는거 내용
+	std::string s2(argv[3]);//세번쨰로 받는거 바꿀내용
 
 	ifs.open(file_name);//파일이름 받아서 열기
 
